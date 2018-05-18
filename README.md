@@ -189,6 +189,18 @@ message on the IDE, with options to **"Enable Dart Support"** and **"Open Dart S
 
 Check out the [Hello Rectangle README.md](hello_rectangle/README.md) for more details on the next steps & notes.
 
+### Flutter Internals
+
+Learn more about the Reactive Framework and the Development Tools through these resources (detailed notes TBD).
+
+1. [Flutter Rendering](https://www.youtube.com/watch?v=UUfXWzp0-DU)
+2. [Flutter Engine](https://github.com/flutter/engine/wiki)
+3. [Hot Reload](https://flutter.io/hot-reload/)
+4. [Flutter Inspector](https://dart-lang.github.io/observatory/)
+5. [Dart Style Guide](https://www.dartlang.org/guides/language/effective-dart/style)
+6. [Dart Observatory](https://dart-lang.github.io/observatory/)
+
+
 <hr/>
  
 ## 2. Building Interactive Apps
