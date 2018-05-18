@@ -4,12 +4,14 @@ Notes from [UD905 - Udacity Course on Flutter](https://www.udacity.com/course/bu
 released May 2018 in conjunction with Google I/O. The course 
 currently has two parts:
 
- 1. The Flutter Framework. Focus on fundamentals.
- 2. Building Interactive Apps. Focus on Material Design. 
+ 1. [The Flutter Framework](#1-the-flutter-framework). Focus on fundamentals.
+ 2. [Building Interactive Apps](#2-building-interactive-apps). Focus on Material Design. 
  
  In this readme I hope to capture relevant notes from my 
  walk-through of this course that would support running this
  as a self-guided or study-group based workshop.
+ 
+ <hr/>
  
 ## 1. The Flutter Framework
  
@@ -55,9 +57,9 @@ be shipped in respective device app markets.
  * Static types, sound type system: easy to develop & debug
  * OO Development: will be familiar to Java, Swift & JS developers
  
-### Hello Rectangle App
+### Getting Setup
 
-Build your first app and [validate your setup](https://flutter.io/setup). The
+Before building your first app, first [validate your setup](https://flutter.io/setup). The
 course uses Android Studio. I am going to focus on using
 IntelliJ IDEA (as IDE) and Flutter CLI (```flutter```) to 
 the extent possible so that we don't give a false
@@ -80,7 +82,7 @@ $ flutter doctor
 ```
 _So I ran the upgrade process as requested:_
 
-```$xslt
+```
 $ flutter upgrade
 
 Upgrading Flutter from /Users/.../flutter/flutter...
@@ -115,17 +117,33 @@ nor do I have a physical device connected. Let me fix that
 by starting an iPhone simulator (on MacOS)._ 
 
 
-```$xslt
+```
 $ open -a Simulator.app
 ```
+This should fix the warning though, to be clear, you 
+can ignore the warning for now and start with the
+development phase if you want to.
+
+```
+$ flutter doctor
+
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel beta, v0.3.2, on Mac OS X 10.13.4 17E199, locale en-US)
+[✓] Android toolchain - develop for Android devices (Android SDK 28.0.0-rc1)
+[✓] iOS toolchain - develop for iOS devices (Xcode 9.3.1)
+[✓] Android Studio (version 3.1)
+[✓] IntelliJ IDEA Ultimate Edition (version 2018.1.2)
+[✓] Connected devices (1 available)
+
+• No issues found!
+```
+
 _You can also use ```adb``` to run Android emulators 
 from the command line. But you must have the Android
 SDK installed first. Later on, when using the
 IntelliJ IDE, we can pick Android or iOS target devices
 at runtime from that menu._
 
-
-## 2. Building Interactive Apps
 
 > Getting Started: CLI vs. IDE
 
@@ -147,3 +165,30 @@ _I am going to use the CLI to create, and
 then use the "Open" feature of the IDE to load the 
 existing project for the build/debug phases just to
 explore both environments._
+
+
+### Hello Rectangle App
+
+Alright let's create that project!
+
+```$xslt
+$ flutter create hello_rectangle
+All done! In order to run your application, type:
+
+<truncated output ...>
+
+  $ cd hello_rectangle
+  $ flutter run
+
+Your main program file is lib/main.dart in the hello_rectangle directory.
+```
+
+Alright. This creates a ```hello_rectangle/``` directory.
+I opened this up with IntelliJ IDEA and looked into the ```lib/main.dart``` file. On first opening this, I see a **"Dart is not enabled for this ..."**
+message on the IDE, with options to **"Enable Dart Support"** and **"Open Dart Settings"**. I simply clicked _Enable Dart Support_ and was good to go.
+
+Check out the [Hello Rectangle README.md](hello_rectangle/README.md) for more details on the next steps & notes.
+
+<hr/>
+ 
+## 2. Building Interactive Apps
